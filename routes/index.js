@@ -5,9 +5,9 @@ const needle = require('needle');
 const apicache = require('apicache');
 
 // env variables
-const API_BASE_URL = process.env.API_BASE_URL;
-const API_KEY_NAME = process.env.API_KEY_NAME;
-const API_KEY_VALUE = process.env.API_KEY_VALUE;
+const API_BASE_URL = process.env.GOOGLE_PLACES_BASE_URL;
+const API_KEY_NAME = process.env.GOOGLE_KEY_NAME;
+const API_KEY_VALUE = process.env.GOOGLE_KEY;
 
 // initialize cache
 let cache = apicache.middleware;

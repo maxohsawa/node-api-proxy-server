@@ -21,13 +21,8 @@ router.get('/', cache('2 minutes'), async (req, res) => {
       ...url.parse(req.url, true).query,
     });
 
-    // set header options
-    const options = {
-      'Access-Control-Allow-Origin': '*',
-    };
-
     // use parameter object to build outgoing request
-    const apiRes = await needle('get', `${API_BASE_URL}?${params}`, options);
+    const apiRes = await needle('get', `${API_BASE_URL}?${params}`);
     const data = apiRes.body;
 
     // logs request to the public API during testing

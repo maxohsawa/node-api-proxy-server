@@ -19,6 +19,10 @@ app.set('trust proxy', 1);
 app.use('/api', require('./routes'));
 
 // enable cors
-app.use(cors());
+app.use(
+  cors({
+    origin: '*',
+  })
+);
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));

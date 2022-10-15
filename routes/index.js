@@ -11,9 +11,10 @@ const API_KEY_VALUE = process.env.GOOGLE_KEY;
 
 // initialize cache
 let cache = apicache.middleware;
+// cache('2 minutes'),
 
 // cache middleware will cache response for 2 minutes
-router.get('/', cache('2 minutes'), async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     // build parameter object based on the incoming request
     const params = new URLSearchParams({

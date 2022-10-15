@@ -15,14 +15,14 @@ const limiter = rateLimit({
 app.use(limiter);
 app.set('trust proxy', 1);
 
-// routes
-app.use('/api', require('./routes'));
-
 // enable cors
 app.use(
   cors({
     origin: '*',
   })
 );
+
+// routes
+app.use('/api', require('./routes'));
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));

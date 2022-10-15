@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon index"
+    "dev": "nodemon index",
+    "server": "node index.js > server_log.log 2> server_err.log"
   },
   "repository": {
     "type": "git",
